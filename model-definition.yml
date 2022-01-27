@@ -1,0 +1,27 @@
+kind: Model
+api_version: v1beta1
+metadata:
+  display_name: Clip tool
+  name: tools-clip
+  publisher: Newcastle University
+  summary: Tool for archiving, zipping, files together
+  source_code: https://github.com/OpenCLIM/tools-zip
+  description: >
+    Will zip, adding to a single archive file, all files and directories found at the given path.
+spec:
+  inputs:
+    parameters:
+      - name: ARCHIVE_PATH
+        title: Archiving path
+        type: string
+        description: The path from which all files and sub-directories should be archived
+        default: '/data'
+        required: true
+
+    dataslots:
+
+  outputs:
+    datasets:
+      - name: outputs/data.zip
+        type: Archive
+        description: Archive object containing all data at the given path

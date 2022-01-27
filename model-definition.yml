@@ -1,8 +1,8 @@
 kind: Model
 api_version: v1beta1
 metadata:
-  display_name: Clip tool
-  name: tools-clip
+  display_name: ToolSet:Zip
+  name: tools-zip
   publisher: Newcastle University
   summary: Tool for archiving, zipping, files together
   source_code: https://github.com/OpenCLIM/tools-zip
@@ -19,6 +19,12 @@ spec:
         required: true
 
     dataslots:
+      - name: Files to archive
+        description: Files to archive
+        path: inputs/to_archive
+        required: false
+        default:
+          - d13b3f41-87ef-4a38-a414-02708642f2be
 
   outputs:
     datasets:
